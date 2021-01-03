@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.navHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
 
-        val appBarConfiguration: AppBarConfiguration = AppBarConfiguration(navController.graph)
+        AppBarConfiguration(navController.graph)
     }
 
     override fun onSupportNavigateUp(): Boolean {

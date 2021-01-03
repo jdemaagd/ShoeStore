@@ -3,17 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- LinearLayout: simple flat layout, no performance gain via ConstraintLayout  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/iv_quality_shoes"
+            style="@style/IconStyle"
+            android:layout_marginTop="@dimen/layout_margin_large"
+            android:src="@drawable/fitness_icon" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/text_size_default"
-            android:text="Welcome to Shoes!" />
+            android:id="@+id/tv_quality_shoes_label"
+            style="@style/TextViewStyle"
+            android:text="@string/quality_shoes"
+            tools:text="@string/quality_shoes" />
+
+        <ImageView
+            android:id="@+id/iv_secure_payment"
+            style="@style/IconStyle"
+            android:layout_marginTop="@dimen/layout_margin_large"
+            android:src="@drawable/secure_payment_icon" />
+
+        <TextView
+            android:id="@+id/tv_secure_payment_label"
+            style="@style/TextViewStyle"
+            android:layout_marginBottom="@dimen/layout_margin_large"
+            android:text="@string/secure_payment"
+            tools:text="@string/secure_payment" />
+
+        <Button
+            android:id="@+id/btn_instruction"
+            style="@style/ButtonStyle"
+            android:text="@string/instruction" />
 
     </LinearLayout>
 

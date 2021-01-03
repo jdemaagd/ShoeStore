@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 
 import com.jdemaagd.shoestore.R
 import com.jdemaagd.shoestore.databinding.FragmentLoginBinding
+import timber.log.Timber
 
 class LoginFragment : Fragment() {
 
@@ -40,6 +41,8 @@ class LoginFragment : Fragment() {
     }
 
     fun authenticated(): Boolean {
+        Timber.i("Fake Authenticate User")
+
         // Note: only validating email/password are not empty
         return !binding.etEmail.text.isNullOrEmpty() &&
                 !binding.etPassword.text.isNullOrEmpty()

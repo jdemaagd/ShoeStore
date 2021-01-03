@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Note: leveraging NavigationUI library id must match destination
+               verify id in navigation graph -->
+    <item
+        android:id="@+id/login_destination"
+        android:title="@string/logout" />
+</menu>
