@@ -15,6 +15,7 @@
     <string name="quality_shoes">Quality Shoes</string>
     <string name="instruction">Instruction</string>
     <string name="welcome">Welcome</string>
+    <string name="cd_secure_payment">Secure Payment Image</string>
 
     <!-- Instruction Screen -->
     <string name="shoes"> Shoes</string>

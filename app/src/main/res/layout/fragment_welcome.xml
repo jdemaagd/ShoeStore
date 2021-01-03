@@ -13,7 +13,8 @@
             android:id="@+id/iv_quality_shoes"
             style="@style/IconStyle"
             android:layout_marginTop="@dimen/layout_margin_large"
-            android:src="@drawable/fitness_icon" />
+            android:src="@drawable/fitness_icon"
+            android:contentDescription="@string/cd_shoe_image" />
 
         <TextView
             android:id="@+id/tv_quality_shoes_label"
@@ -25,7 +26,8 @@
             android:id="@+id/iv_secure_payment"
             style="@style/IconStyle"
             android:layout_marginTop="@dimen/layout_margin_large"
-            android:src="@drawable/secure_payment_icon" />
+            android:src="@drawable/secure_payment_icon"
+            android:contentDescription="@string/cd_secure_payment" />
 
         <TextView
             android:id="@+id/tv_secure_payment_label"

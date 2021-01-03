@@ -15,7 +15,6 @@ import androidx.navigation.findNavController
 import com.jdemaagd.shoestore.R
 import com.jdemaagd.shoestore.databinding.FragmentLoginBinding
 import com.jdemaagd.shoestore.models.User
-import com.jdemaagd.shoestore.screens.shoe.ShoeDetailsViewModel
 
 import timber.log.Timber
 

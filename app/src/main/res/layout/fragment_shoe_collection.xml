@@ -2,8 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- ConstraintLayout: more complex layout that would require some nesting with LinearLayout
-                           so there would be some performance gain in making flat as possible -->
+    <!-- ConstraintLayout: probably could have gone with LinearLayout with no difference in performance -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
