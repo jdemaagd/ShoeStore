@@ -81,7 +81,7 @@ class LoginFragment : Fragment() {
 
         // Note: only validating email/password are not empty
         return !binding.user?.email?.isNullOrEmpty()!! &&
-                !binding.user?.email?.isNullOrEmpty()!!
+                !binding.user?.password?.isNullOrEmpty()!!
     }
 
     private fun setUser() {
