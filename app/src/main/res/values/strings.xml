@@ -22,5 +22,12 @@
     <!-- Shoe Screen -->
     <string name="shoe_collection">SHOE COLLECTION</string>
     <string name="add_item">Add Item</string>
+    <string name="logout">Logout</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company_name">Company Name</string>
+    <string name="description">Description</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="collection_title">Shoe Collection</string>
+    <string name="add_shoe_details">Shoe Details</string>
 
 </resources>

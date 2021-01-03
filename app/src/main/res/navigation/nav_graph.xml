@@ -30,9 +30,25 @@
             android:id="@+id/action_instruction_to_shoe_list"
             app:destination="@id/shoe_list_destination" />
     </fragment>
+
     <fragment
         android:id="@+id/shoe_list_destination"
-        android:name="com.jdemaagd.shoestore.screens.shoe.ShoeListFragment"
-        android:label="ShoeListFragment" />
+        android:name="com.jdemaagd.shoestore.screens.shoe.ShoeCollectionFragment"
+        android:label="ShoeListFragment" >
+        <action
+            android:id="@+id/action_shoe_list_to_shoe_details"
+            app:destination="@id/shoe_details_destination" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shoe_details_destination"
+        android:name="com.jdemaagd.shoestore.screens.shoe.ShoeDetailsFragment"
+        android:label="ShoeDetailsFragment" >
+        <action
+            android:id="@+id/action_shoe_details_to_shoe_list"
+            app:destination="@id/shoe_list_destination"
+            app:popUpTo="@id/shoe_list_destination"
+            app:popUpToInclusive="false" />
+    </fragment>
 
 </navigation>
