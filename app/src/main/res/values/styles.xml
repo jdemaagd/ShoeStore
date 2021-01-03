@@ -41,4 +41,45 @@
         <item name="android:textSize">@dimen/text_size_default</item>
     </style>
 
+    <style name="IconStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/layout_margin_default</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+    </style>
+
+    <style name="TextViewShoeStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/layout_margin_default</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+    </style>
+
+    <style name="TextViewHeaderStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/layout_margin_default</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/text_size_header</item>
+    </style>
+
+    <style name="FabStyle">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_gravity">end|bottom</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:contentDescription">@string/add_item</item>
+    </style>
+
 </resources>

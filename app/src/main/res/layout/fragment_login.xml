@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.jdemaagd.shoestore.models.User" />
+    </data>
 
     <!-- LinearLayout: simple flat layout, no performance gain via ConstraintLayout  -->
     <LinearLayout
