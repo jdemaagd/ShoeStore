@@ -12,8 +12,27 @@
             android:id="@+id/action_login_to_welcome"
             app:destination="@id/welcome_destination" />
     </fragment>
+
     <fragment
         android:id="@+id/welcome_destination"
         android:name="com.jdemaagd.shoestore.screens.welcome.WelcomeFragment"
-        android:label="WelcomeFragment" />
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcome_to_instruction"
+            app:destination="@id/instruction_destination" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/instruction_destination"
+        android:name="com.jdemaagd.shoestore.screens.instruction.InstructionFragment"
+        android:label="InstructionFragment" >
+        <action
+            android:id="@+id/action_instruction_to_shoe_list"
+            app:destination="@id/shoe_list_destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoe_list_destination"
+        android:name="com.jdemaagd.shoestore.screens.shoe.ShoeListFragment"
+        android:label="ShoeListFragment" />
+
 </navigation>

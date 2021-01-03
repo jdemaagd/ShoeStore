@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_shoe"
+            style="@style/IconStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shoe" />
+
+        <TextView
+            android:id="@+id/tv_cancel_shoe"
+            style="@style/TextViewStyle"
+            android:text="@string/cancel_shoe"
+            tools:text="@string/cancel_shoe" />
+
+        <TextView
+            android:id="@+id/tv_save_shoe"
+            style="@style/TextViewStyle"
+
+            android:text="@string/save_shoe"
+            tools:text="@string/save_shoe" />
+
+        <Button
+            android:id="@+id/btn_shoes"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="@dimen/layout_margin_large"
+            android:text="@string/shoes" />
+
+    </LinearLayout>
+
+</layout>

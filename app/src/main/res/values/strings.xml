@@ -9,5 +9,18 @@
     <string name="create_account">Create Account</string>
     <string name="login">Login</string>
 
+    <!-- Welcome Screen -->
+    <string name="secure_payment">Secure Payment</string>
+    <string name="quality_shoes">Quality Shoes</string>
+    <string name="instruction">Instruction</string>
+
+    <!-- Instruction Screen -->
+    <string name="shoes"> Shoes</string>
+    <string name="cancel_shoe">Cancel: if new shoe is not satisfactory, cancel to return to Shoes Inventory</string>
+    <string name="save_shoe">Save: if you like new shoe, please save to add to Shoe Inventory</string>
+
+    <!-- Shoe Screen -->
+    <string name="shoe_collection">SHOE COLLECTION</string>
+    <string name="add_item">Add Item</string>
 
 </resources>
