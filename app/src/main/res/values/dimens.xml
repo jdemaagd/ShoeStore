@@ -5,6 +5,7 @@
     <dimen name="layout_margin_small">8dp</dimen>
     <dimen name="layout_margin_default">16dp</dimen>
     <dimen name="layout_margin_large">32dp</dimen>
+    <dimen name="layout_margin_xlarge">64dp</dimen>
 
     <!-- text dimensions -->
     <dimen name="text_size_default">19sp</dimen>
