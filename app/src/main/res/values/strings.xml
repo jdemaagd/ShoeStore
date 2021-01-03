@@ -31,7 +31,9 @@
     <string name="description">Description</string>
     <string name="shoe_size">Shoe Size</string>
     <string name="collection_title">Shoe Collection</string>
-    <string name="add_shoe_details">Shoe Details</string>
+    <string name="shoe_details">Shoe Details</string>
     <string name="cd_add_shoe">Add Shoe Button</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
 
 </resources>

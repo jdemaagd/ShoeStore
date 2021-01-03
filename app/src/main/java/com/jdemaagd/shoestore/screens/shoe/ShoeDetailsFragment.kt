@@ -19,7 +19,7 @@ import timber.log.Timber
 
 class ShoeDetailsFragment : Fragment() {
 
-    lateinit var shoeDetailsViewModel: ShoeDetailsViewModel
+    private lateinit var shoeDetailsViewModel: ShoeDetailsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,12 +39,12 @@ class ShoeDetailsFragment : Fragment() {
         // Note: setup binding for LiveData to know to observe this LifecycleOwner
         binding.lifecycleOwner = this
 
-        binding.save.setOnClickListener { view ->
+        binding.btnSave.setOnClickListener { view ->
             binding.shoe = Shoe(
-                binding.shoeName.text.toString(),
-                binding.shoeSize.text.toString(),
-                binding.companyName.text.toString(),
-                binding.shoeDescription.text.toString()
+                binding.etShoeName.text.toString(),
+                binding.etShoeSize.text.toString(),
+                binding.etCompanyName.text.toString(),
+                binding.etDescription.text.toString()
             )
 
             val shoe = binding.shoe
@@ -59,11 +59,11 @@ class ShoeDetailsFragment : Fragment() {
 
         // Note: leverage Navigation via graph to find correct destination to
         //       popTo: shoe_list (non-inclusive)
-        binding.cancel.setOnClickListener { view ->
+        binding.btnCancel.setOnClickListener { view ->
             view?.findNavController()?.navigate(ShoeDetailsFragmentDirections.actionShoeDetailsToShoeList())
         }
 
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.add_shoe_details)
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.shoe_details)
 
         return binding.root
     }
