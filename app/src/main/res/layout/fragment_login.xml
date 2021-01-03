@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- LinearLayout: simple flat layout, no performance gain via ConstraintLayout  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_email"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/enter_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email"
+                style="@style/TextInputStyle"
+                android:autofillHints="@string/enter_email"
+                android:inputType="textEmailAddress"
+                tools:text="@string/enter_email" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_password"
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginBottom="@dimen/layout_margin_large"
+            android:hint="@string/enter_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                style="@style/TextInputStyle"
+                android:autofillHints="@string/enter_password"
+                android:inputType="textPassword"
+                tools:text="@string/enter_password" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/ButtonStyle"
+            android:text="@string/login" />
+
+        <Button
+            android:id="@+id/btn_create"
+            style="@style/ButtonStyle"
+            android:text="@string/create_account" />
+
+    </LinearLayout>
+
+</layout>

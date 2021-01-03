@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- margin dimensions -->
+    <dimen name="layout_margin_default">16dp</dimen>
+    <dimen name="layout_margin_large">32dp</dimen>
+
+    <!-- text dimensions -->
+    <dimen name="text_size_default">19sp</dimen>
+    <dimen name="text_size_button">24sp</dimen>
+    <dimen name="letter_spacing_default">0.0</dimen>
+
+</resources>

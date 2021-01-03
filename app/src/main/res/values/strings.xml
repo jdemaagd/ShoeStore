@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+
+    <!-- Login Screen -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="enter_email">please enter email</string>
+    <string name="enter_password">please enter password</string>
+    <string name="create_account">Create Account</string>
+    <string name="login">Login</string>
+
+
+</resources>
