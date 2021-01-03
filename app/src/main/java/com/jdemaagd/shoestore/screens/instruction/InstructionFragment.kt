@@ -29,7 +29,8 @@ class InstructionFragment : Fragment() {
 
         // Note: leverage Navigation via graph to find correct destination to
         binding.btnShoes.setOnClickListener { view ->
-            view.findNavController().navigate(InstructionFragmentDirections.actionInstructionToShoeList())
+            view.findNavController()
+                .navigate(InstructionFragmentDirections.actionInstructionToShoeList())
         }
 
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.instruction)
