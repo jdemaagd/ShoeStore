@@ -28,8 +28,8 @@ class ShoeDetailsViewModel : ViewModel() {
     }
 
     fun saveCurrentDetail(detail: Shoe?) {
-        detail?.let {
-            _shoes.value?.add(it)
+        detail?.let { shoe ->
+            _shoes.value?.add(shoe)
         }
     }
 }

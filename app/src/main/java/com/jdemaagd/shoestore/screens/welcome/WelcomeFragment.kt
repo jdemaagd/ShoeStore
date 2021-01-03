@@ -29,7 +29,8 @@ class WelcomeFragment : Fragment() {
 
         // Note: leverage Navigation via graph to find correct destination to
         binding.btnInstruction.setOnClickListener { view ->
-            view.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeToInstruction())
+            view.findNavController()
+                .navigate(WelcomeFragmentDirections.actionWelcomeToInstruction())
         }
 
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.welcome)
