@@ -8,16 +8,19 @@
     <string name="enter_password">please enter password</string>
     <string name="create_account">Create Account</string>
     <string name="login">Login</string>
+    <string name="no_auth">Not Authorized, please try email/password again.</string>
 
     <!-- Welcome Screen -->
     <string name="secure_payment">Secure Payment</string>
     <string name="quality_shoes">Quality Shoes</string>
     <string name="instruction">Instruction</string>
+    <string name="welcome">Welcome</string>
 
     <!-- Instruction Screen -->
     <string name="shoes"> Shoes</string>
     <string name="cancel_shoe">Cancel: if new shoe is not satisfactory, cancel to return to Shoes Inventory</string>
     <string name="save_shoe">Save: if you like new shoe, please save to add to Shoe Inventory</string>
+    <string name="cd_shoe_image">Shoe Image</string>
 
     <!-- Shoe Screen -->
     <string name="shoe_collection">SHOE COLLECTION</string>
@@ -29,5 +32,6 @@
     <string name="shoe_size">Shoe Size</string>
     <string name="collection_title">Shoe Collection</string>
     <string name="add_shoe_details">Shoe Details</string>
+    <string name="cd_add_shoe">Add Shoe Button</string>
 
 </resources>

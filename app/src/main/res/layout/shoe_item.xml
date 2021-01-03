@@ -1,73 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- ConstraintLayout: would give some performance boost with more complex layout -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- ConstraintLayout: flattens nested/hierarchical components tree -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_shoe_name_label"
+        style="@style/TextViewShoeStyle"
+        android:text="@string/shoe_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            style="@style/TextViewStyle"
-            android:text="@string/shoe_name" />
+    <TextView
+        android:id="@+id/tv_shoe_name"
+        style="@style/TextViewShoeStyle"
+        android:hint="@string/shoe_name"
+        app:layout_constraintStart_toEndOf="@id/tv_shoe_name_label"
+        app:layout_constraintTop_toTopOf="@id/tv_shoe_name_label" />
 
-        <TextView
-            android:id="@+id/shoe_name"
-            style="@style/TextViewStyle"
-            android:hint="@string/shoe_name" />
+    <TextView
+        android:id="@+id/tv_company_name_label"
+        style="@style/TextViewShoeStyle"
+        android:layout_marginTop="@dimen/layout_margin_xsmall"
+        android:text="@string/company_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shoe_name_label" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_company_name"
+        style="@style/TextViewShoeStyle"
+        android:hint="@string/company_name"
+        app:layout_constraintStart_toEndOf="@id/tv_company_name_label"
+        app:layout_constraintTop_toTopOf="@id/tv_company_name_label" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_shoe_size_label"
+        style="@style/TextViewShoeStyle"
+        android:layout_marginTop="@dimen/layout_margin_xsmall"
+        android:text="@string/shoe_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_company_name_label" />
 
-        <TextView
-            style="@style/TextViewStyle"
-            android:text="@string/company_name" />
+    <TextView
+        android:id="@+id/tv_shoe_size"
+        style="@style/TextViewShoeStyle"
+        android:hint="@string/shoe_size"
+        app:layout_constraintStart_toEndOf="@id/tv_shoe_size_label"
+        app:layout_constraintTop_toTopOf="@id/tv_shoe_size_label" />
 
-        <TextView
-            android:id="@+id/company_name"
-            style="@style/TextViewStyle"
-            android:hint="@string/company_name" />
+    <TextView
+        android:id="@+id/tv_shoe_description_label"
+        style="@style/TextViewShoeStyle"
+        android:layout_marginTop="@dimen/layout_margin_xsmall"
+        android:text="@string/description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shoe_size_label" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_shoe_description"
+        style="@style/TextViewShoeStyle"
+        android:hint="@string/description"
+        app:layout_constraintStart_toEndOf="@id/tv_shoe_description_label"
+        app:layout_constraintTop_toTopOf="@id/tv_shoe_description_label" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            style="@style/TextViewStyle"
-            android:text="@string/shoe_size" />
-
-        <TextView
-            android:id="@+id/shoe_size"
-            style="@style/TextViewStyle"
-            android:hint="@string/shoe_size" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            style="@style/TextViewStyle"
-            android:text="@string/description" />
-
-        <TextView
-            android:id="@+id/shoe_description"
-            style="@style/TextViewStyle"
-            android:hint="@string/description" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
