@@ -3,7 +3,9 @@ package com.jdemaagd.shoestore.screens.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+
 import com.jdemaagd.shoestore.models.User
+
 import timber.log.Timber
 
 class LoginViewModel : ViewModel() {
