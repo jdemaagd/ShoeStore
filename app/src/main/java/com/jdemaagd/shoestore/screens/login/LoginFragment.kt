@@ -33,6 +33,17 @@ class LoginFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_login, container, false)
 
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.login)
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        Timber.i("Fragment Lifecycle onViewCreated: " +
+                "Fragment View has been instantiated so handle LifecycleOwner ")
+
         // Note: create ViewModel and associate to this Fragment
         //       also handles configuration changes such as device rotation
         loginViewModel = ViewModelProvider(requireActivity()).get(LoginViewModel::class.java)
@@ -40,45 +51,41 @@ class LoginFragment : Fragment() {
         // Note: setup binding for LiveData to know to observe this LifecycleOwner
         binding.lifecycleOwner = this
 
-        binding.user = createUser()
-
         // Note: leverage Navigation via graph to find correct destination to
         binding.btnCreate.setOnClickListener { view ->
+            setUser()
+
             if (authenticated()) {
                 view.findNavController().navigate(LoginFragmentDirections.actionLoginToWelcome())
             } else {
-                Toast.makeText(context, getString(R.string.no_auth), Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, getString(R.string.no_auth),
+                    Toast.LENGTH_SHORT).show()
             }
         }
 
         // Note: leverage Navigation via graph to find correct destination to
         binding.btnLogin.setOnClickListener { view ->
+            setUser()
+
             if (authenticated()) {
                 view.findNavController().navigate(LoginFragmentDirections.actionLoginToWelcome())
             } else {
-                Toast.makeText(context, getString(R.string.no_auth), Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, getString(R.string.no_auth),
+                    Toast.LENGTH_SHORT).show()
             }
         }
-
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.login)
-
-        return binding.root
     }
 
     private fun authenticated(): Boolean {
         Timber.i("Fake Authentication!")
 
         // Note: only validating email/password are not empty
-        return !binding.etEmail.text.isNullOrEmpty() &&
-                !binding.etPassword.text.isNullOrEmpty()
+        return !binding.user?.email?.isNullOrEmpty()!! &&
+                !binding.user?.email?.isNullOrEmpty()!!
     }
 
-    private fun createUser(): User? {
-        if (!binding.etEmail.text.isNullOrEmpty() &&
-                !binding.etPassword.text.isNullOrEmpty()) {
-            return User(binding.etEmail.text.toString(), binding.etPassword.text.toString())
-        }
-
-        return null
+    private fun setUser() {
+        binding.user = User(binding.etEmail.text.toString(),
+            binding.etPassword.text.toString())
     }
 }

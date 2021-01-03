@@ -34,7 +34,8 @@ class ShoeDetailsFragment : Fragment() {
 
         // Note: create ViewModel and associate to this Fragment
         //       also handles configuration changes such as device rotation
-        shoeDetailsViewModel = ViewModelProvider(requireActivity()).get(ShoeDetailsViewModel::class.java)
+        shoeDetailsViewModel = ViewModelProvider(requireActivity())
+            .get(ShoeDetailsViewModel::class.java)
 
         // Note: setup binding for LiveData to know to observe this LifecycleOwner
         binding.lifecycleOwner = this
@@ -60,7 +61,8 @@ class ShoeDetailsFragment : Fragment() {
         // Note: leverage Navigation via graph to find correct destination to
         //       popTo: shoe_list (non-inclusive)
         binding.btnCancel.setOnClickListener { view ->
-            view?.findNavController()?.navigate(ShoeDetailsFragmentDirections.actionShoeDetailsToShoeList())
+            view?.findNavController()
+                ?.navigate(ShoeDetailsFragmentDirections.actionShoeDetailsToShoeList())
         }
 
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.shoe_details)

@@ -34,7 +34,8 @@ class ShoeCollectionFragment : Fragment() {
 
         // Note: leverage Navigation via graph to find correct destination to
         binding.fabAddShoe.setOnClickListener { view ->
-            view.findNavController().navigate(ShoeCollectionFragmentDirections.actionShoeListToShoeDetails())
+            view.findNavController()
+                .navigate(ShoeCollectionFragmentDirections.actionShoeListToShoeDetails())
         }
 
         return binding.root
