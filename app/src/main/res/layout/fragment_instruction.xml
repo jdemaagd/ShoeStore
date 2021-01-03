@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <!-- LinearLayout: simple flat layout, no performance gain via ConstraintLayout  -->
@@ -14,7 +13,8 @@
             style="@style/IconStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/shoe" />
+            android:src="@drawable/shoe"
+            android:contentDescription="@string/cd_shoe_image" />
 
         <TextView
             android:id="@+id/tv_cancel_shoe"
