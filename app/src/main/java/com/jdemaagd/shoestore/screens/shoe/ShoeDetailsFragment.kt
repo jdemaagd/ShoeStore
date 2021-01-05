@@ -20,6 +20,7 @@ import timber.log.Timber
 class ShoeDetailsFragment : Fragment() {
 
     private lateinit var shoeDetailsViewModel: ShoeDetailsViewModel
+    private lateinit var binding: FragmentShoeDetailsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,8 +30,17 @@ class ShoeDetailsFragment : Fragment() {
 
         Timber.i("Fragment Lifecycle onCreateView: inflate view and handle bindings.")
 
-        val binding = DataBindingUtil.inflate<FragmentShoeDetailsBinding>(
+        binding = DataBindingUtil.inflate<FragmentShoeDetailsBinding>(
             inflater, R.layout.fragment_shoe_details, container, false)
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        Timber.i("Fragment Lifecycle onViewCreated: " +
+                "Fragment View has been instantiated so handle LifecycleOwner ")
 
         // Note: create ViewModel and associate to this Fragment
         //       also handles configuration changes such as device rotation
@@ -40,14 +50,9 @@ class ShoeDetailsFragment : Fragment() {
         // Note: setup binding for LiveData to know to observe this LifecycleOwner
         binding.lifecycleOwner = this
 
-        binding.btnSave.setOnClickListener { view ->
-            binding.shoe = Shoe(
-                binding.etShoeName.text.toString(),
-                binding.etShoeSize.text.toString(),
-                binding.etCompanyName.text.toString(),
-                binding.etDescription.text.toString()
-            )
+        binding.shoe = Shoe("Set Name","Shoe Size","Set Company","Give Description")
 
+        binding.btnSave.setOnClickListener { view ->
             val shoe = binding.shoe
 
             shoeDetailsViewModel.saveCurrentDetail(shoe)
@@ -66,7 +71,5 @@ class ShoeDetailsFragment : Fragment() {
         }
 
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.shoe_details)
-
-        return binding.root
     }
 }
