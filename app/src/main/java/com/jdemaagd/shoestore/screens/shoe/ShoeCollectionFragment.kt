@@ -12,6 +12,7 @@ import androidx.navigation.ui.NavigationUI
 
 import com.jdemaagd.shoestore.R
 import com.jdemaagd.shoestore.databinding.FragmentShoeCollectionBinding
+import com.jdemaagd.shoestore.models.Shoe
 
 import timber.log.Timber
 
@@ -56,9 +57,10 @@ class ShoeCollectionFragment : Fragment() {
         binding.lifecycleOwner = this
 
         // Note: ViewModel field(s) can now Observer Lifecycle changes
-        showDetailsViewModel.shoes.observe(viewLifecycleOwner, { list ->
-            val adapter = ShoeAdapter(list)
-            binding.rvShoes.adapter = adapter
+        showDetailsViewModel.shoes.observe(viewLifecycleOwner, { shoes ->
+            if (shoes.isNotEmpty()) {
+                createShoes(shoes)
+            }
         })
 
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.collection_title)
@@ -74,5 +76,16 @@ class ShoeCollectionFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
+    }
+
+    private fun createShoes(shoes: List<Shoe>) {
+        context?.let { context ->
+            val shoeContainer = binding.llShoes
+            shoes.forEach { shoe ->
+                val shoeLayout = ShoeItem(context)
+                shoeLayout.loadShoe(shoe)
+                shoeContainer.addView(shoeLayout)
+            }
+        }
     }
 }
