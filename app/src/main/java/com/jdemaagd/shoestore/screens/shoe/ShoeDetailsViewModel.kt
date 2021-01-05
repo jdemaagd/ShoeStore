@@ -30,6 +30,14 @@ class ShoeDetailsViewModel : ViewModel() {
     fun saveCurrentDetail(detail: Shoe?) {
         detail?.let { shoe ->
             _shoes.value?.add(shoe)
+            Timber.i("Name: ${shoe.name},  " +
+                    "Company: ${shoe.company},  " +
+                    "Size: ${shoe.size}")
         }
+
+        Timber.i("Shoe Count: ${_shoes.value?.size}")
+        Timber.i("Name: ${_shoes.value?.get(0)?.name},  " +
+                "Company: ${_shoes.value?.get(0)?.company},  " +
+                "Size: ${_shoes.value?.get(0)?.size}")
     }
 }

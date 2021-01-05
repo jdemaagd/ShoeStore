@@ -11,63 +11,63 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_shoe_name_label"
+            android:id="@+id/tv_name_label"
             style="@style/TextViewShoeStyle"
             android:text="@string/shoe_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_shoe_name"
+            android:id="@+id/tv_name"
             style="@style/TextViewShoeStyle"
             android:hint="@string/shoe_name"
-            app:layout_constraintStart_toEndOf="@id/tv_shoe_name_label"
-            app:layout_constraintTop_toTopOf="@id/tv_shoe_name_label" />
+            app:layout_constraintStart_toEndOf="@id/tv_name_label"
+            app:layout_constraintTop_toTopOf="@id/tv_name_label" />
 
         <TextView
-            android:id="@+id/tv_company_name_label"
+            android:id="@+id/tv_company_label"
             style="@style/TextViewShoeStyle"
             android:layout_marginTop="@dimen/layout_margin_xsmall"
             android:text="@string/company_name"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_shoe_name_label" />
+            app:layout_constraintTop_toBottomOf="@id/tv_name_label" />
 
         <TextView
-            android:id="@+id/tv_company_name"
+            android:id="@+id/tv_company"
             style="@style/TextViewShoeStyle"
             android:hint="@string/company_name"
-            app:layout_constraintStart_toEndOf="@id/tv_company_name_label"
-            app:layout_constraintTop_toTopOf="@id/tv_company_name_label" />
+            app:layout_constraintStart_toEndOf="@id/tv_company_label"
+            app:layout_constraintTop_toTopOf="@id/tv_company_label" />
 
         <TextView
-            android:id="@+id/tv_shoe_size_label"
+            android:id="@+id/tv_size_label"
             style="@style/TextViewShoeStyle"
             android:layout_marginTop="@dimen/layout_margin_xsmall"
             android:text="@string/shoe_size"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_company_name_label" />
+            app:layout_constraintTop_toBottomOf="@id/tv_company_label" />
 
         <TextView
-            android:id="@+id/tv_shoe_size"
+            android:id="@+id/tv_size"
             style="@style/TextViewShoeStyle"
             android:hint="@string/shoe_size"
-            app:layout_constraintStart_toEndOf="@id/tv_shoe_size_label"
-            app:layout_constraintTop_toTopOf="@id/tv_shoe_size_label" />
+            app:layout_constraintStart_toEndOf="@id/tv_size_label"
+            app:layout_constraintTop_toTopOf="@id/tv_size_label" />
 
         <TextView
-            android:id="@+id/tv_shoe_description_label"
+            android:id="@+id/tv_description_label"
             style="@style/TextViewShoeStyle"
             android:layout_marginTop="@dimen/layout_margin_xsmall"
             android:text="@string/description"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_size_label" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_size_label" />
 
         <TextView
-            android:id="@+id/tv_shoe_description"
+            android:id="@+id/tv_description"
             style="@style/TextViewShoeStyle"
             android:hint="@string/description"
-            app:layout_constraintStart_toEndOf="@id/tv_shoe_description_label"
-            app:layout_constraintTop_toTopOf="@id/tv_shoe_description_label" />
+            app:layout_constraintStart_toEndOf="@id/tv_description_label"
+            app:layout_constraintTop_toTopOf="@id/tv_description_label" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
